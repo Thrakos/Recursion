@@ -5,13 +5,7 @@ public class IntroToRecursion {
 		// 1. Recursion is when a method calls itself.
 		// Before running the program, what do you predict
 		// the output will be?
-		// printRecursively(10);
-
-		String j = "fdsfsd";
-		if (j.contains("d")) {
-			j = j.replaceAll("d", "");
-		}
-		System.out.println(j);
+		printRecursively(10);
 
 	}
 

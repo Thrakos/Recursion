@@ -18,13 +18,20 @@ void draw(){
 }
 
 void recursiveRect(int x, int y, int w, int h, int scale){
-  //fill me out
+  if (w >= scale && h >= scale){
+    rect(x, y, w, h);
+    recursiveRect(x + 1, y + 1, w - scale, h - scale, scale);
+  }
 }
 
 void recursiveEllipse(int x, int y, int w, int h, int scale){
-  //me too
+   if (w >= scale && h >= scale){
+    ellipse(x, y, w, h);
+    recursiveEllipse(x, y, w - scale, h - scale, scale);
+  }
 }
 
 void recursiveTriangle(int x1, int y1, int x2, int y2,  int x3, int y3, int scale){
-  //me three
+   triangle(x1, y1, x2, y2, x3, y3);
+   recursiveTriangle(x1 - scale, y2 - scale, x2 - scale, y2 - scale, x3 - scale, y3 - scale, scale);
 }

@@ -10,7 +10,7 @@ void setup(){
 
 void draw(){
   fill(#0000FF);
-  recursiveRect(0, 0, 100, 100, 2);
+  recursiveRect(0, 0, 100, 100, 4);
   fill(#FF0000);
   recursiveEllipse(300, 150, 300, 200, 15);
   fill(#00FF00);
@@ -20,7 +20,7 @@ void draw(){
 void recursiveRect(int x, int y, int w, int h, int scale){
   if (w >= scale && h >= scale){
     rect(x, y, w, h);
-    recursiveRect(x + 1, y + 1, w - scale, h - scale, scale);
+    recursiveRect(x + scale/2, y + scale/2, w - scale, h - scale, scale);
   }
 }
 
@@ -32,6 +32,7 @@ void recursiveEllipse(int x, int y, int w, int h, int scale){
 }
 
 void recursiveTriangle(int x1, int y1, int x2, int y2,  int x3, int y3, int scale){
-   triangle(x1, y1, x2, y2, x3, y3);
-   recursiveTriangle(x1 - scale, y2 - scale, x2 - scale, y2 - scale, x3 - scale, y3 - scale, scale);
+//   triangle(x1, y1, x2, y2, x3, y3);
+//   recursiveTriangle(x1 - scale, y2 - scale, x2 - scale, y2 - scale, x3 - scale, y3 - scale, scale);
 }
+ NO ONE CARES ABOUT THE TRIANGLES!
